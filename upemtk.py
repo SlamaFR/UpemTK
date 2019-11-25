@@ -182,7 +182,7 @@ class EventListenerError(Exception):
 #############################################################################
 
 
-def creer_fenetre(largeur, hauteur, frequence=100, nom=None, evenement=None):
+def creer_fenetre(largeur, hauteur, frequence=100, nom=None, evenements=None):
     """
     Crée une fenêtre de dimensions ``largeur`` x ``hauteur`` pixels.
     """
@@ -191,7 +191,7 @@ def creer_fenetre(largeur, hauteur, frequence=100, nom=None, evenement=None):
         raise WindowError(
             "La fenêtre a déjà été créée avec la fonction \"creer_fenetre\" !"
         )
-    __canvas = CustomCanvas(largeur, hauteur, frequence, name=nom, events=evenement)
+    __canvas = CustomCanvas(largeur, hauteur, frequence, name=nom, events=evenements)
 
 
 def fermer_fenetre():
